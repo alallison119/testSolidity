@@ -22,10 +22,13 @@ contract BallotBox {
 
     }
     event balncer(uint256 balances);
+    event timeR(uint256);
     function test() public {
         emit balncer(twitt.balanceOf(msg.sender));
     }
-
+    function getTime() public {
+        emit timeR(block.timestamp);
+    }
     struct Voter {
         bool voted;  // if true, that person already voted
         uint vote;   // index of the voted proposal
